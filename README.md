@@ -3,16 +3,15 @@ XRAY_ANOMALY_METHOD1
 
 Bu proje, göğüs röntgeni görüntülerinde anomali tespiti için klasik makine öğrenmesi (ML) ve öznitelik çıkarım yöntemlerine dayalıdır. İki veri kümesi üzerinde çalışılmıştır: Dataset1 (ikili sınıflandırma: Normal vs Pneumonia) ve Dataset2 (beş sınıflı sınıflandırma). 
 
-Proje, iki temel yöntem içerir:
-- Yöntem 1: El yapımı öznitelik çıkarımı + klasik ML (SVM, KNN, MLP, XGBoost)
-- Yöntem 2: CNN tabanlı derin öğrenme (README’de yer almıyor)
+
+Bu proje kapsamında kullanılan yöntem: El yapımı öznitelik çıkarımı  (HOG, LBP, HARALICK) + klasik ML (SVM, KNN, MLP, XGBoost)
 
 ------------------------------
 Klasör Yapısı ve Açıklamaları:
 ------------------------------
 
-data/
-├── raw/              -> Orijinal görüntü verisi (yüksek boyutlu, bu klasör GitHub’a eklenmemelidir)
+data/ (Görüntü verisi çok fazla yer kapladığı için her set)
+├── raw/              -> Orijinal görüntü verisi
 ├── processed/        -> Yeniden boyutlandırılmış, normalize edilmiş görüntüler (isteğe bağlı)
 
 features/
