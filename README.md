@@ -1,3 +1,9 @@
+NOT:
+.npy ve image verileri çok büyük olduğu için yüklenemedi. 
+.zip halinin içerisine datalar küçük sample halinde oluşturuldu, features oluşturma fonksiyonlarının çalıştırılarak yeniden oluşturulması gerekiyor (feature_extraction.ipynb). Features verileri ziplenmek için de çok büyük. Sorun çıktığı taktirde bireysel yanınıza gelip kayıtlı verilerle kendi bilgisayarımdan da gösterebilirim.
+
+
+
 XRAY_ANOMALY_METHOD1
 ====================
 
