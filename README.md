@@ -1,4 +1,4 @@
-NOT:
+NOT: drive linki, https://drive.google.com/file/d/1O5SD5joX08KNQ-WttyaLi6-EMrS22RvJ/view?usp=sharing
 .npy ve image verileri çok büyük olduğu için yüklenemedi. 
 .zip halinin içerisine datalar küçük sample halinde oluşturuldu, features oluşturma fonksiyonlarının çalıştırılarak yeniden oluşturulması gerekiyor (feature_extraction.ipynb). Features verileri ziplenmek için de çok büyük. Sorun çıktığı taktirde bireysel yanınıza gelip kayıtlı verilerle kendi bilgisayarımdan da gösterebilirim.
 
