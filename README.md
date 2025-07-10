@@ -15,7 +15,7 @@ data/ (Görüntü verisi çok fazla yer kapladığı için her set)
 ├── processed/        -> Yeniden boyutlandırılmış, normalize edilmiş görüntüler (isteğe bağlı)
 
 features/
-├── dataset1/         -> Dataset1 için çıkarılmış öznitelikler (HOG, LBP, Haralick, combined)
+├── dataset1/         -> Dataset1 için çıkarılmış öznitelikler (HOG, LBP, Haralick, ve kombinasyonları)
 ├── dataset2/         -> Dataset2 için çıkarılmış öznitelikler
 
 models/
@@ -26,26 +26,29 @@ notebooks/
 ├── dataset1_training/
 │   ├── data_preprocessing.ipynb        -> Dataset1 için görsel işleme ve grayscale + resize
 │   ├── feature_extraction.ipynb        -> HOG, LBP, Haralick özniteliklerinin çıkarımı
-│   ├── model_training.ipynb            -> SVM/KNN gibi modellerin eğitimi
-│   └── model_training_pca_gridsearch.ipynb -> PCA + hiperparametre ayarlama
+│   ├── model_training.ipynb            -> Farklı öznitelik yöntemleriyle modellerin eğitilerek etkilerinin incelenmesi
+│   └── model_training_pca_gridsearch.ipynb -> PCA ile boyut indirgeyerek GridSearchCV ile hiperparametre optimizasyonu + final modellerin belirlenmesi
 ├── dataset2_training/
-│   └── (boş veya eklenebilir)
-├── feature_n.ipynb                     -> Dataset2 için ek öznitelik kombinasyon denemeleri
-├── test_dataset1.ipynb                 -> Dataset1 modelleriyle test sonuçları
-├── test_dataset2.ipynb                 -> Dataset2 modelleriyle test sonuçları
+│   ├── data_preprocessing.ipynb        -> Dataset2 için görsel işleme ve grayscale + resize
+│   ├── feature_extraction.ipynb        -> HOG, LBP, Haralick özniteliklerinin çıkarımı
+│   ├── model_training.ipynb            -> Farklı öznitelik yöntemleriyle modellerin eğitilerek etkilerinin incelenmesi
+│   └── model_training_pca_gridsearch.ipynb -> PCA ile boyut indirgeyerek GridSearchCV ile hiperparametre optimizasyonu + final modellerin belirlenmesi
+├── feature_n.ipynb                     -> Öznitelik boyutlarının kontrolü
+├── test_dataset1.ipynb                 -> Dataset1 final modelleriyle test sonuçları
+├── test_dataset2.ipynb                 -> Dataset2 final modelleriyle test sonuçları
 
 src/method1/
 ├── __init__.py
 ├── evaluate.py                         -> Model değerlendirme fonksiyonları (accuracy, classification_report)
 ├── features.py                         -> Öznitelik çıkarım fonksiyonları (HOG, LBP, Haralick)
 ├── model_pipeline.py                   -> Pipeline oluşturma ve kayıt işlemleri
-├── pca_and_normalization.py            -> PCA + normalization işlemleri
-├── preprocessing.py                    -> Görüntü ön işleme (resize, grayscale, dengeleme vb.)
+├── pca_and_normalization.py            -> PCA + normalization işlemleri (pipeline içerisinde de oluşturulabiliyor)
+├── preprocessing.py                    -> Görüntü ön işleme (resize, grayscale, dengeleme vb.) ve image processing için CLAHE uygulanması 
 ├── visualization_utils.py              -> Confusion matrix ve grafik görselleştirme fonksiyonları
 
 requirements.txt                        -> Gerekli Python kütüphaneleri listesi
 README.md                               -> Proje özeti (Markdown)
-.gitignore                              -> Takip edilmeyecek dosyalar (örn. __pycache__, .npy, .pkl)
+.gitignore                              -> Takip edilmeyecek dosyalar (örn. __pycache__, .pkl, büyük boyutlu dosyalar)
 
 ------------------------------
 Kullanım:
