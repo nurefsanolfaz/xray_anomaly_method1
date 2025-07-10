@@ -9,7 +9,7 @@ Bu proje kapsamında kullanılan yöntem: El yapımı öznitelik çıkarımı  (
 ------------------------------
 Klasör Yapısı ve Açıklamaları:
 ------------------------------
-
+```
 data/ (Görüntü verisi çok fazla yer kapladığı için her set)
 ├── raw/              -> Orijinal görüntü verisi
 ├── processed/        -> Yeniden boyutlandırılmış, normalize edilmiş görüntüler (isteğe bağlı)
@@ -49,7 +49,7 @@ src/method1/
 requirements.txt                        -> Gerekli Python kütüphaneleri listesi
 README.md                               -> Proje özeti (Markdown)
 .gitignore                              -> Takip edilmeyecek dosyalar (örn. __pycache__, .pkl, büyük boyutlu dosyalar)
-
+```
 ------------------------------
 Kullanım:
 ------------------------------
